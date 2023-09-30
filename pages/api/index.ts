@@ -9,9 +9,13 @@ export default function handler(
   res: NextApiResponse<Data>
 ) {
   console.log(req.url);
-  
+
   const query = req.query.q as string;
   const response = QueryProcessor(query);
-
-  res.status(200).send(response);
+  if (response == "" ) {
+  console.log("blank");
+     res.status(404).send();
+  }else {
+	res.status(200).send(response);
+	}
 }
