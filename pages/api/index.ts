@@ -12,10 +12,5 @@ export default function handler(
 
   const query = req.query.q as string;
   const response = QueryProcessor(query);
-  if (response == "" ) {
-  console.log("blank");
-     res.status(404).send();
-  }else {
-	res.status(200).send(response);
-	}
+  res.status(200).send(response);
 }

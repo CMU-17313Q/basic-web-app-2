@@ -3,5 +3,5 @@ export default function QueryProcessor(query: string): string {
     return ("test3");
   }
 
-  return "";
+  return "I don't know";
 }
